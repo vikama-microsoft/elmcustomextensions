@@ -20,6 +20,12 @@
          "metadata":{
             "Description":"Catalog Id from ELM"
          }
+      },
+      "resourceApplicationId":{
+         "type":"String",
+         "metadata":{
+            "Description":"Resource application Id from ELM"
+         }
       }
    },
    "variables":{
@@ -124,7 +130,7 @@
                                  {
                                     "equals":[
                                        "@triggerBody()?['Event']",
-                                       "CustomActionConnectionTest"
+                                       "CustomExtensionConnectionTest"
                                     ]
                                  }
                               ]
@@ -139,8 +145,8 @@
                         "and":[
                            {
                               "equals":[
-                                 "@{triggerBody()?['CatalogId']}",
-                                 "0b066920-1fd1-4af4-970c-2985b815f1e1"
+                                 "[variables('catalogIdExpression')]",
+                                 "[parameters('catalogId')]"
                               ]
                            }
                         ]
@@ -162,19 +168,19 @@
                "triggers":{
                   "openAuthenticationPolicies":{
                      "policies":{
-                        "ELMAuthPolicy":{
+                        "AzureADEntitlementManagementAuthPolicy":{
                            "type":"AAD",
                            "claims":[
                               {
                                  "name":"iss",
-                                 "value":"[concat('https://sts.windows.net/', subscription().tenantId, '/')]"
+                                 "value":"[concat('https://login.microsoftonline.com/', subscription().tenantId, '/v2.0')]"
                               },
                               {
                                  "name":"aud",
-                                 "value":"[environment().authentication.audiences[0]]"
+                                 "value":"[parameters('resourceApplicationId')]"
                               },
                               {
-                                 "name":"appid",
+                                 "name":"azp",
                                  "value":"810dcf14-1858-4bf2-8134-4c369fa3235b"
                               }
                            ]
