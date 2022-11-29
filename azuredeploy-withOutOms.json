@@ -38,7 +38,7 @@
    },
    "variables":{
       "catalogIdExpression":"@{triggerBody()?['CatalogId']}",
-      "possession":"[concat(resourceGroup().id, '/providers/Microsoft.Logic/workflows/', parameters('name')))]"
+      "possession":"[concat(resourceGroup().id, '/providers/Microsoft.Logic/workflows/', parameters('name'))]"
    },
    "resources":[
       {
