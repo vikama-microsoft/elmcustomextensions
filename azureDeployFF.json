@@ -159,7 +159,7 @@
                            "claims":[
                               {
                                  "name":"iss",
-                                 "value":"[concat('https://login.microsoftonline.us/', subscription().tenantId, '/')]"
+                                 "value":"[concat('https://sts.windows.net/', subscription().tenantId, '/')]"
                               },
                               {
                                  "name":"aud",
