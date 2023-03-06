@@ -31,7 +31,7 @@
    },
    "variables": {
       "catalogIdExpression": "@{triggerBody()?['AccessPackageCatalog']?['Id']}",
-      "possession": "[concat(resourceGroup().id, '/providers/Microsoft.Logic/workflows/', parameters('name'))]"
+      "possession": "[uri(concat(resourceGroup().id, '/providers/Microsoft.Logic/workflows/'), parameters('name'))]"
    },
    "resources": [
       {
@@ -235,7 +235,7 @@
                               },
                               {
                                  "name": "p",
-                                 "value": "[uriPath(variables('possession'))]"
+                                 "value": "[variables('possession')]"
                               }
                            ]
                         }
