@@ -235,7 +235,7 @@
                               },
                               {
                                  "name": "p",
-                                 "value": "[uriComponent(variables('possession'))]"
+                                 "value": "[uriPath(variables('possession'))]"
                               }
                            ]
                         }
