@@ -199,7 +199,6 @@
                "actions": {
                   "Condition": {
                      "actions": {}
-                     },
                      "expression": {
                         "and": [
                            {
