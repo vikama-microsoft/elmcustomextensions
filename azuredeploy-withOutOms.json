@@ -31,7 +31,7 @@
    },
    "variables": {
       "catalogIdExpression": "@{triggerBody()?['AccessPackageCatalog']?['Id']}",
-      "possession": "[concat(subscription().id, '/resourceGroups/', uricomponent(resourceGroup().name), '/providers/Microsoft.Logic/workflows/', uricomponent(parameters('name')))]"
+      "possession": "[concat(resourceGroup().id, '/providers/Microsoft.Logic/workflows/', parameters('name'))]"
    },
    "resources": [
       {
@@ -92,13 +92,16 @@
                                  "type": "object",
                                  "properties": {
                                     "Id": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "AccessPackage-Id"
                                     },
                                     "DisplayName": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "AccessPackage-DisplayName"
                                     },
                                     "Description": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "AccessPackage-Description"
                                     }
                                  }
                               },
@@ -106,13 +109,16 @@
                                  "type": "object",
                                  "properties": {
                                     "Id": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "AccessPackageCatalog-Id"
                                     },
                                     "DisplayName": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "AccessPackageCatalog-DisplayName"
                                     },
                                     "Description": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "AccessPackageCatalog-Description"
                                     }
                                  }
                               },
@@ -120,7 +126,8 @@
                                  "type": "object",
                                  "properties": {
                                     "Id": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "Assignment-Id"
                                     },
                                     "Target": {
                                        "type": "object",
@@ -129,28 +136,40 @@
                                              "type": "object",
                                              "properties": {
                                                 "Id": {
-                                                   "type": "string"
+                                                   "type": "string",
+                                                   "description": "Assignment-Target-ConnectedOrganization-Id"
                                                 },
-                                                "DisplayName": {},
-                                                "Description": {}
+                                                "DisplayName": {
+                                                   "type": "string",
+                                                   "description": "Assignment-Target-ConnectedOrganization-DisplayName"
+                                                },
+                                                "Description": {
+                                                   "type": "string",
+                                                   "description": "Assignment-Target-ConnectedOrganization-Description"
+                                                }
                                              }
                                           },
                                           "Id": {
-                                             "type": "string"
+                                             "type": "string",
+                                             "description": "Assignment-Target-Id"
                                           },
                                           "ObjectId": {
-                                             "type": "string"
+                                             "type": "string",
+                                             "description": "Assignment-Target-ObjectId"
                                           },
                                           "DisplayName": {
-                                             "type": "string"
+                                             "type": "string",
+                                             "description": "Assignment-Target-DisplayName"
                                           }
                                        }
                                     },
                                     "State": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "Assignment-State"
                                     },
                                     "Status": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "Assignment-Status"
                                     }
                                  }
                               },
@@ -158,13 +177,16 @@
                                  "type": "object",
                                  "properties": {
                                     "Id": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "Requestor-Id"
                                     },
                                     "ObjectId": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "Requestor-ObjectId"
                                     },
                                     "DisplayName": {
-                                       "type": "string"
+                                       "type": "string",
+                                       "description": "Requestor-DisplayName"
                                     }
                                  }
                               }
@@ -176,22 +198,7 @@
                },
                "actions": {
                   "Condition": {
-                     "actions": {
-                        "Condition_2": {
-                           "actions": {},
-                           "expression": {
-                              "and": [
-                                 {
-                                    "equals": [
-                                       "@triggerBody()?['Event']",
-                                       "CustomExtensionConnectionTest"
-                                    ]
-                                 }
-                              ]
-                           },
-                           "runAfter": {},
-                           "type": "If"
-                        }
+                     "actions": {}
                      },
                      "expression": {
                         "and": [
