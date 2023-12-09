@@ -14,6 +14,9 @@
 
  [![Logic with MSI and Resume](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fvikama-microsoft%2Felmcustomextensions%2Fmain%2FazureDeploy-request-sysmsi-resume-withoutoms.json)
 
+  [![Logic with MSI and Resume](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Figaelmprodportalhosting.blob.core.windows.net%2Farm-deployment-template%2Flogicapp-pop-assignmentRequest-azureDeploy-sysmsi-resume-withoutoms.json)
+
+
 This template creates a simple logic app with all the authorization policy settings and schema to http trigger that is needed by Azure AD entitlement management custom action API.
 
 Below are the parameters that the template expects.
