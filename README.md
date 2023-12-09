@@ -12,7 +12,7 @@
  [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fvikama-microsoft%2Felmcustomextensions%2Fmain%2Fazuredeploy-withOutOms.json)
 [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fvikama-microsoft%2Felmcustomextensions%2Fmain%2Fazuredeploy.json)
 
- [![Logic with MSI and Resume](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fvikama-microsoft%2Felmcustomextensions%2Fmain%2FazureDeploy-request-sysmsi-resume-withoutoms)
+ [![Logic with MSI and Resume](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fvikama-microsoft%2Felmcustomextensions%2Fmain%2FazureDeploy-request-sysmsi-resume-withoutoms.json)
 
 This template creates a simple logic app with all the authorization policy settings and schema to http trigger that is needed by Azure AD entitlement management custom action API.
 
